@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IUu-ez-Joc">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BKW-xn-SzZ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IUu-ez-Joc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5xn-ov-xho">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XSP-Us-46T" kind="relationship" relationship="viewControllers" id="Bys-O0-uTJ"/>
+                        <segue destination="vXO-J9-d1i" kind="relationship" relationship="viewControllers" id="9AN-V5-Bsg"/>
+                        <segue destination="OEj-ko-joh" kind="relationship" relationship="viewControllers" id="DHU-Y2-smE"/>
+                        <segue destination="jbq-Yd-KYb" kind="relationship" relationship="viewControllers" id="cWg-Bc-cij"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ToJ-sF-TWE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
+        </scene>
+        <!--Favourites-->
+        <scene sceneID="8wt-WG-H3H">
+            <objects>
+                <collectionViewController id="jbq-Yd-KYb" customClass="FavouriteMoviesCollectionViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="OfV-OT-PRa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="CCZ-X0-Yxc">
+                            <size key="itemSize" width="150" height="300"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="jbq-Yd-KYb" id="Fbh-Aq-7e0"/>
+                            <outlet property="delegate" destination="jbq-Yd-KYb" id="Ng1-Ce-apK"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Favourites" id="xau-hf-d41"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TEI-ai-hGw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="830"/>
+        </scene>
+        <!--Top-->
+        <scene sceneID="6zT-Ff-au4">
+            <objects>
+                <collectionViewController id="vXO-J9-d1i" customClass="TopCollectionViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dAo-Uu-UNA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="5dB-Mt-llc">
+                            <size key="itemSize" width="150" height="300"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="vXO-J9-d1i" id="1Kc-DM-sm6"/>
+                            <outlet property="delegate" destination="vXO-J9-d1i" id="zVC-Au-fK3"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Top" id="tbS-dj-coa"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJ2-7X-ySD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="294"/>
+        </scene>
+        <!--Search Collection View Controller-->
+        <scene sceneID="4ly-M6-UeD">
+            <objects>
+                <collectionViewController id="svm-0g-8AP" customClass="SearchCollectionViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="am0-rv-pTq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="fwd-uP-OSt">
+                            <size key="itemSize" width="150" height="300"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="svm-0g-8AP" id="ghi-vR-bJQ"/>
+                            <outlet property="delegate" destination="svm-0g-8AP" id="NJd-ER-wZ2"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="j3w-4L-OPy"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gV-kU-8bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2942.0289855072465" y="80.357142857142847"/>
+        </scene>
+        <!--Popular-->
+        <scene sceneID="ewE-Ja-l2I">
+            <objects>
+                <collectionViewController id="XSP-Us-46T" customClass="PopularCollectionViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="MhK-64-O83">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="4Go-YW-rfh">
+                            <size key="itemSize" width="150" height="300"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="XSP-Us-46T" id="Cyj-Pa-BSA"/>
+                            <outlet property="delegate" destination="XSP-Us-46T" id="4dC-cZ-trJ"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Popular" id="Ka9-rd-jrS"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GgB-lb-AhS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135" y="-404"/>
+        </scene>
+        <!--search-->
+        <scene sceneID="uCH-gQ-4Ml">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OEj-ko-joh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="search" id="4Dh-rn-ilq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hYS-68-U3g">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="svm-0g-8AP" kind="relationship" relationship="rootViewController" id="ilV-Ik-A1c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gci-ZZ-OXm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2031.8840579710147" y="80.357142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
